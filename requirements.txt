@@ -11,8 +11,13 @@
 #plotly
 #nbformat
 #ipykernel
-tensorflow
+#tensorflow
 #folium
 #streamlit_folium
+
+
+streamlit
+tensorflow
+
 
 -e .
