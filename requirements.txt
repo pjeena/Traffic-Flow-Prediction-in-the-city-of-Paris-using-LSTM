@@ -12,5 +12,7 @@ plotly
 nbformat
 ipykernel
 tensorflow
+folium
+streamlit_folium
 
 -e .
