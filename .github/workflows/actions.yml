@@ -2,7 +2,7 @@ name: run full workflow
 
 on:
   schedule:
-    - cron: '* * * * *' # At 00:00 on Monday
+    - cron: '*/15 * * * *' # At 00:00 on Monday
 
 jobs:
   build:
