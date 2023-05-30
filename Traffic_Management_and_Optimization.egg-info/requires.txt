@@ -1,9 +1,5 @@
 pandas
 numpy
-pandas-geojson
-google-cloud-bigquery
-db-dtypes
-tqdm
 scikit-learn
 matplotlib
 streamlit
@@ -11,4 +7,6 @@ watchdog
 plotly
 nbformat
 ipykernel
-tensorflow
+tensorflow==2.13.0rc0
+folium
+streamlit_folium
