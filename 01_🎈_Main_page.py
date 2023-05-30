@@ -97,7 +97,7 @@ N_STEPS = 4
 
 url = 'https://opendata.paris.fr/explore/dataset/comptage-multimodal-comptages/information/?disjunctive.label&disjunctive.mode&disjunctive.voie&disjunctive.sens&disjunctive.trajectoire'
 with st.spinner('Fetching live data from [OpenDataParis](%s) API.....' %url ):
-    get_live_raw_data(dates)
+#    get_live_raw_data(dates)
 #    time.sleep(0)
     st.sidebar.write('✅ Data fetched from API')
     progress_bar.progress(1/N_STEPS)
