@@ -64,5 +64,14 @@ def get_live_raw_data(dates):
                 data_vehicle_hourly.to_parquet(path_to_data_file)
 
                 
-                
+(
+    junction_labels,
+    window_lag,
+    window_lead,
+    num_components_in_one_time_step,
+    dates,
+    current_hour,
+    past_week_hour,
+) = define_constant_attributes()
+
 get_live_raw_data(dates)
