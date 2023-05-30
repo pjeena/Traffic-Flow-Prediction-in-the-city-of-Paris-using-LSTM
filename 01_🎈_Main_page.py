@@ -78,8 +78,8 @@ with col2:
     past_week_hour,
 ) = define_constant_attributes()
 coordinates = pd.read_csv('coordinates.csv',index_col=0)
-dir_predictions = os.path.join('output', 'predictions', '*' , '*.csv')
-file_names = sorted(glob.glob(dir_predictions))
+#dir_predictions = os.path.join('output', 'predictions', '*' , '*.csv')
+#file_names = sorted(glob.glob(dir_predictions))
 
 
 
