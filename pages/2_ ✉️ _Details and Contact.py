@@ -4,7 +4,7 @@ import streamlit as st
 
 st.write(
     "See more in the public repo [GitHub"
-    " repository](https://github.com/pjeena/Forecasting-hourly-energy-demand-based-on-different-energy-sources)"
+    " repository](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM)"
 )
 
 st.code(
