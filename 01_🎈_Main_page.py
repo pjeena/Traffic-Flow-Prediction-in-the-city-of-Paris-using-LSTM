@@ -59,7 +59,7 @@ st.markdown(reduce_header_height_style, unsafe_allow_html=True)
 
 
 
-col1, col2 = st.columns([6.5,5])
+col1, col2 = st.columns([6.7,5])
 with col1:
         st.title(f'Hourly Traffic rate in Paris 🚕')
 with col2:
