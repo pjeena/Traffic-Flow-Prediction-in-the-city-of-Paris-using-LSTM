@@ -1,6 +1,5 @@
 
 
-
 import streamlit as st
 import os 
 import glob
@@ -13,7 +12,7 @@ file_names = sorted(glob.glob(dir_input_to_model_data))
 st.write(file_names)    
 
 #for file in file_names:
-model = tf.keras.models.load_model(  'models/[Paris]RivolixNicolasFlamel.h5'   )
+model = tf.keras.models.load_model('models/[Paris]RivolixNicolasFlamel.h5')
         
         
 st.write(model)
