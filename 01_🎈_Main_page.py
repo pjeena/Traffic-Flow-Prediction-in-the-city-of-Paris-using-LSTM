@@ -66,7 +66,7 @@ with col2:
         option_hr = st.radio(
             "",
             ('Current hr', 'After 1 hr', 'After 2 hrs'), horizontal=True)
-st.write('This app')
+st.write('**This app forecasts the traffic for the next 3 hours from now in real time**')
 
 (
     junction_labels,
