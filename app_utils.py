@@ -126,7 +126,7 @@ def build_features(window_lag, window_lead):
 
 
 
-#@st.cache_data()
+@st.cache_data()
 def get_predictions(current_hour, past_week_hour, window_lag, num_components_in_one_time_step):
         dir_input_to_model_data = os.path.join('output', 'input_data_to_model',  '*.parquet')
         file_names = sorted(glob.glob(dir_input_to_model_data))
