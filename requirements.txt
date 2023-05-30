@@ -1,0 +1,16 @@
+pandas 
+numpy
+pandas-geojson
+google-cloud-bigquery
+db-dtypes
+tqdm
+scikit-learn
+matplotlib
+streamlit
+watchdog
+plotly
+nbformat
+ipykernel
+tensorflow
+
+-e .
