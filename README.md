@@ -55,7 +55,7 @@ The pipeline is triggered automatically whenever new data is available, ensuring
 
 ## Dashboard
 
-The predicted data was visualized by projecting it to a folium [map](https://pjeena-real-time-crime-rate-detection-using-ci-cd-app-knxaip.streamlit.app/) showing the predicted number of vehicles in each junction. 
+The predicted data was visualized by projecting it to a folium map showing the predicted number of vehicles in each junction. 
 
 This shows the traffic in 8 major junctions of Paris. More intensity of color -> more traffic
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dashboard_1.jpeg)
