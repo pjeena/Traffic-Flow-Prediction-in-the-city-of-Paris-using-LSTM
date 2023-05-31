@@ -48,16 +48,12 @@ reduce_header_height_style = """
     </style>
 """
 st.markdown(reduce_header_height_style, unsafe_allow_html=True)
-#st.sidebar.markdown(reduce_header_height_style, unsafe_allow_html=True)
-
-#st.markdown("""
-#<style>
-#    [data-testid=stSidebar] {
-#        background-color: #F5F5F5;
-#    }
-#</style>
-#""", unsafe_allow_html=True)
-
+hide_default_format = """
+       <style>
+       footer {visibility: hidden;}
+       </style>
+       """
+st.markdown(hide_default_format, unsafe_allow_html=True)
 
 
 
