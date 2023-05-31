@@ -1,6 +1,6 @@
 # Traffic Management and Optimization
 
-Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, we have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) based on historical data.
+Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, I have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) based on historical data.
 
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/schema.jpg)
 
@@ -22,15 +22,19 @@ It provides vehicle count data by:
 These data are constructed by using an artificial intelligence algorithm that analyzes images from thermal cameras installed in public spaces. Images from thermal cameras do not identify faces or license plates. The data thus collected does not contain any personal or individual data. No image is transferred or stored on computer servers, the analysis being carried out as close as possible to the thermal camera. Only count data is transmitted.
 
 
-The collected data is inserted into [BiqQuery](https://cloud.google.com/bigquery), serverless and cost-effective enterprise data warehouse.
+The collected data is inserted into [BiqQuery](https://cloud.google.com/bigquery), a serverless and cost-effective enterprise data warehouse.
 
-### **Preprocessing**
+### **Preprocessing and Feature engineering**
 
-Before building the machine learning model, the collected data is preprocessed to clean and transform it into a suitable format. The following preprocessing steps are performed:
+Before building the machine learning model, the collected data is preprocessed to clean and transform it into a suitable format. Since, this is a time-series data, we need to create lag features. Here, I take 24 lag features which means that the traffic from last 24 hours is being considered to forecast the traffic at the current hour and the next two hours. Alternatively, this is a mulit step time series problem. The model schema is as follows :
 
-**Data cleaning**: remove duplicate entries, filled missing values, and correct erroneous data.
+![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/model_schema.jpeg)
 
-**Feature engineering**: create cyclic features based on the time of day, day of the week, and month.
+Suppose we want to predict the traffic(y(T_n)) at the current hour(T_n) and the next two hours, we need the data for the past 24 hrs( f(T_(n-24)) ..... f(T_(n-1)). It can easily be understood in the above table.
+
+Since the data collection is through sensors (which might not work on sometime) there were a decent amount of missing values. They were imputed by using the data from the previous day which seems to be a resonable choice.
+
+As we know that, time is inherently cyclical. To include this information, we perform a cyclic encoding for each time stamp containing hour, day, month. This eventually helps our model to learn the cyclical nature of our data.
 
 
 # Model Building
@@ -56,19 +60,18 @@ The pipeline is triggered automatically whenever new data is available, ensuring
 
 # Dashboard
 
-The predicted data was visualized by projecting it to a folium map showing the predicted number of vehicles in each junction. 
-
+The inferences were visualized by projecting it to a google map showing the forecasted traffic and the change in traffic from prior hour.
 Link to the [dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/).
 
 This shows the traffic in 8 major junctions of Paris. More intensity of color -> more traffic
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dashboard_1.jpeg)
 
-Here, we see the forecats from the last week upto the next 3 hours
+Here, we see the forecats since last week and upto the next 3 hours
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dashboard_2.jpeg)
 
 # Conclusion
 
-This project demonstrates how machine learning algorithms can be used to forecast traffic in real-time, using data from different sources. The project also shows how a CI/CD pipeline can be implemented to automate the data processing, model training, and deployment, improving the efficiency and reliability of the project.
+This project demonstrates how machine learning algorithms can be used to forecast traffic in real-time, using data from different sources. The project also shows how a CI/CD pipeline can be implemented to automate the data processing, model training, and deployment, improving the efficiency and reliability of the project. 
 
 # Future work
 
