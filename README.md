@@ -57,7 +57,8 @@ The pipeline is triggered automatically whenever new data is available, ensuring
 
 The predicted data was visualized by projecting it to a folium map showing the predicted number of vehicles in each junction. 
 
-Link to the [dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/)
+Link to the [dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/).
+
 This shows the traffic in 8 major junctions of Paris. More intensity of color -> more traffic
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dashboard_1.jpeg)
 
