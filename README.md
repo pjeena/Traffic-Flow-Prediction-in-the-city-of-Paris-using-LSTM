@@ -2,7 +2,7 @@
 
 Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, we have developed a machine learning model to forecast traffic conditions based on historical data.
 
-![embed](https://github.com/pjeena/Real-time-crime-rate-detection-using-CI-CD/blob/main/architecture.jpeg)
+![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/schema.jpg)
 
 
 ## **Data Collection**
