@@ -2,7 +2,7 @@ name: run data prep EDA
 
 on:
   schedule:
-    - cron: '0 * * * *' # At 00:00 on Monday
+    - cron: '0 */12 * * *' # At 00:00 on Monday
 
 jobs:
   build:
