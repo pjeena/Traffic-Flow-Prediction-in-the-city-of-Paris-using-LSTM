@@ -257,8 +257,8 @@ with col4:
 
 
                 fig.update_traces(marker_size=8)
-                fig.update_xaxes(title_font=dict(size=16,color="black"))
-                fig.update_yaxes(title_font=dict(size=16,color="black"))
+                fig.update_xaxes(title_font=dict(size=16,color="red"))
+                fig.update_yaxes(title_font=dict(size=16,color="green"))
 
                 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
