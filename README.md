@@ -36,6 +36,9 @@ Since the data collection is through sensors (which might not work on sometime) 
 
 As we know that, time is inherently cyclical. To include this information, we perform a cyclic encoding for each time stamp containing hour, day, month. This eventually helps our model to learn the cyclical nature of our data.
 
+# Exploratory data analysis
+
+
 
 # Model Building
 
