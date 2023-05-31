@@ -99,8 +99,8 @@ if statistics_type=='By each junction':
                 )
                 fig.update_layout(xaxis=dict(tickmode="linear", tick0=0.0, dtick=1.0))
                 fig.update_traces(marker_size=10)
-                fig.update_xaxes(title_font=dict(size=16, family="Courier", color="black"))
-                fig.update_yaxes(title_font=dict(size=16, family="Courier", color="black"))
+                fig.update_xaxes(title_font=dict(size=16, family="Courier", color="red"))
+                fig.update_yaxes(title_font=dict(size=16, family="Courier", color="green"))
                 # fig.update_layout(xaxis = dict(tickfont = dict(size=13)))
                 # fig.update_layout(yaxis = dict(tickfont = dict(size=13)))
 
@@ -202,8 +202,8 @@ if statistics_type=='Between different junctions':
                             )
                             fig.update_layout(xaxis=dict(tickmode="linear", tick0=0.0, dtick=1.0))
                             fig.update_traces(marker_size=10)
-                            fig.update_xaxes(title_font=dict(size=16, family="Courier", color="black"))
-                            fig.update_yaxes(title_font=dict(size=16, family="Courier", color="black"))
+                            fig.update_xaxes(title_font=dict(size=16, family="Courier", color="red"))
+                            fig.update_yaxes(title_font=dict(size=16, family="Courier", color="green"))
                             # fig.update_layout(xaxis = dict(tickfont = dict(size=13)))
                             # fig.update_layout(yaxis = dict(tickfont = dict(size=13)))
 
