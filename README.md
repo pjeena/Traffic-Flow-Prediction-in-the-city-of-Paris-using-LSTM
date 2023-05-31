@@ -1,29 +1,30 @@
 # Traffic Management and Optimization
 
-Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, we have developed a machine learning model to forecast traffic conditions based on historical data.
+Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, we have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) based on historical data.
 
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/schema.jpg)
 
+## Data pipeline
 
-## **Data Collection**
+### **Data Collection**
 The project collects data from the following APIs:
 
 [Open Data Paris API](https://opendata.paris.fr/explore/dataset/comptage-multimodal-comptages/api/?disjunctive.label&disjunctive.mode&disjunctive.voie&disjunctive.sens&disjunctive.trajectoire&sort=t)
 
 It provides vehicle count data by:
 
--> Travel modes (Scooters, Scooters + Bicycles (when the distinction between these 2 travel modes is not implemented on the sensor), Bicycles, 2 motorized wheels, Light vehicles < 3.5 tonnes, Heavy vehicles > 3.5 tonnes , Buses & Coaches),
+* Travel modes (Scooters, Scooters + Bicycles (when the distinction between these 2 travel modes is not implemented on the sensor), Bicycles, 2 motorized wheels, Light vehicles < 3.5 tonnes, Heavy vehicles > 3.5 tonnes , Buses & Coaches),
 
--> Traffic lane types (Corona-lanes, Cycle lanes, General lanes),
+* Traffic lane types (Corona-lanes, Cycle lanes, General lanes),
 
--> Direction of traffic .
+* Direction of traffic .
 
-These data are constructed by using an artificial intelligence algorithm that analyzes images from thermal cameras installed in public spaces. Images from thermal cameras do not identify faces or license plates. The data thus collected does not contain any personal or individual data. No image is transferred or stored on computer servers, the analysis being carried out as close as possible to the thermal camera. Only count data is transmitted. 
+These data are constructed by using an artificial intelligence algorithm that analyzes images from thermal cameras installed in public spaces. Images from thermal cameras do not identify faces or license plates. The data thus collected does not contain any personal or individual data. No image is transferred or stored on computer servers, the analysis being carried out as close as possible to the thermal camera. Only count data is transmitted.
+
 
 The collected data is inserted into [BiqQuery](https://cloud.google.com/bigquery), serverless and cost-effective enterprise data warehouse.
 
-
-## **Preprocessing**
+### **Preprocessing**
 
 Before building the machine learning model, the collected data is preprocessed to clean and transform it into a suitable format. The following preprocessing steps are performed:
 
@@ -32,11 +33,11 @@ Before building the machine learning model, the collected data is preprocessed t
 **Feature engineering**: create cyclic features based on the time of day, day of the week, and month.
 
 
-## Model Building
+# Model Building
 
 After getting the data in the appropriate format, a LSTM was trained on test set and validated on val set. The model was evaluated using rmse.
 
-## CI/CD Pipeline
+# CI/CD Pipeline
 
 To automate data fetching, data processing, model training, and deployment, a CI/CD pipeline is implemented using Github actions. The pipeline includes the following stages:
 
@@ -53,7 +54,7 @@ To automate data fetching, data processing, model training, and deployment, a CI
 
 The pipeline is triggered automatically whenever new data is available, ensuring that the model is always up-to-date and accurate.
 
-## Dashboard
+# Dashboard
 
 The predicted data was visualized by projecting it to a folium map showing the predicted number of vehicles in each junction. 
 
@@ -65,11 +66,11 @@ This shows the traffic in 8 major junctions of Paris. More intensity of color ->
 Here, we see the forecats from the last week upto the next 3 hours
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dashboard_2.jpeg)
 
-## Conclusion
+# Conclusion
 
 This project demonstrates how machine learning algorithms can be used to forecast traffic in real-time, using data from different sources. The project also shows how a CI/CD pipeline can be implemented to automate the data processing, model training, and deployment, improving the efficiency and reliability of the project.
 
-## Future work
+# Future work
 
 This project provides a foundation for further development and improvement. Some possible areas for future work include:
 
