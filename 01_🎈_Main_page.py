@@ -19,6 +19,8 @@ import locale
 import pytz  
 import pydeck as pdk
 import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import folium
 from folium.plugins import HeatMap
 import folium.plugins as plugins
@@ -239,17 +241,26 @@ with col4:
 
 
 
-                fig = px.line(df, x="datetime", y="no_of_vehicles", color="type", markers=True,color_discrete_sequence=["red", "aqua"],
-                            labels={
-                                    "no_of_vehicles": "No of vehicles passing each hour",
-                                    "datetime": "Datetime",
-                                }, title= file.split('/')[-2] )
-                #fig.update_layout(xaxis=dict(tickmode="linear", tick0=0.0, dtick=1.0))
-                fig.update_traces(marker_size=10)
+                trace1 = go.Scatter(
+                    x=  df[df.type == 'Prediction']['datetime'] ,
+                    y= df[df.type == 'Prediction']['no_of_vehicles'],
+                    name='Prediction', mode='lines+markers', marker_color='red'
+                )
+                trace2 = go.Scatter(
+                    x= df[df.type == 'Actual'].iloc[:-2 , :]['datetime'] ,
+                    y= df[df.type == 'Actual'].iloc[:-2 , :]['no_of_vehicles'],
+                    name='Actual',
+                    yaxis='y2', mode='lines+markers', marker_color='aqua'
+                )
+
+                fig = make_subplots(specs=[[{"secondary_y": True}]])
+                fig.add_trace(trace1)
+                fig.add_trace(trace2,secondary_y=True)
+                fig['layout'].update(height = 500, width = 1000, title = file.split('/')[-2])
+                fig.update_traces(marker_size=8)
                 fig.update_xaxes(title_font=dict(size=16, family="Courier", color="black"))
                 fig.update_yaxes(title_font=dict(size=16, family="Courier", color="black"))
 
                 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
- #               st.altair_chart((chart ).interactive(),theme='streamlit', use_container_width=True)
 
 
