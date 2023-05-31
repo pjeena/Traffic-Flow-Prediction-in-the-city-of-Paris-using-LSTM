@@ -13,5 +13,4 @@ src/05_model_trainer.py
 src/06_predict_pipeline.py
 src/__init__.py
 src/data_fetching_util.py
-src/live_data_fetching_for_dashboard.py
 src/utils.py
