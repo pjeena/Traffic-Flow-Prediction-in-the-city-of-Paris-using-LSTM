@@ -49,7 +49,7 @@ To automate data fetching, data processing, model training, and deployment, a CI
 
 **Model evaluation**: evaluate the performance of the model using rmse.
 
-**Model deployment**: deploy the model on a [web-based dashboard](https://pjeena-real-time-crime-rate-detection-using-ci-cd-app-knxaip.streamlit.app/), which displays real-time traffic and historical insights on different junctions of Paris.
+**Model deployment**: deploy the model on a [web-based dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/), which displays real-time traffic and historical insights on different junctions of Paris.
 
 
 The pipeline is triggered automatically whenever new data is available, ensuring that the model is always up-to-date and accurate.
