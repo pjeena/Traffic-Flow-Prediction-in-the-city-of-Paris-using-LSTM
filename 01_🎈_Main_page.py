@@ -240,7 +240,8 @@ with col4:
                 trace1 = go.Scatter(
                     x=  df[df.type == 'Prediction']['datetime'] ,
                     y= df[df.type == 'Prediction']['no_of_vehicles'],
-                    name='Prediction', mode='lines+markers', marker_color='red'
+                    name='Prediction', mode='lines+markers', marker_color='red',
+                    
                 )
                 trace2 = go.Scatter(
                     x= df[df.type == 'Actual'].iloc[:-2 , :]['datetime'] ,
@@ -252,10 +253,12 @@ with col4:
                 fig = make_subplots(specs=[[{"secondary_y": True}]])
                 fig.add_trace(trace1)
                 fig.add_trace(trace2,secondary_y=True)
-                fig['layout'].update(height = 500, width = 1000, title = file.split('/')[-2])
+                fig['layout'].update(height = 500, width = 1000, title = file.split('/')[-2], yaxis_title='No of vehicles passing each hour',xaxis_title='Datetime')
+
+
                 fig.update_traces(marker_size=8)
-                fig.update_xaxes(title_font=dict(size=16, family="Courier", color="black"))
-                fig.update_yaxes(title_font=dict(size=16, family="Courier", color="black"))
+                fig.update_xaxes(title_font=dict(size=16,color="black"))
+                fig.update_yaxes(title_font=dict(size=16,color="black"))
 
                 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
