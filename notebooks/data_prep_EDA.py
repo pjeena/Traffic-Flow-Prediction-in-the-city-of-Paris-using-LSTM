@@ -10,8 +10,6 @@ import warnings
 warnings.filterwarnings('ignore')
 from google.cloud import bigquery
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'groovy-smithy-386015-6898ff63f9b9.json'
-
 
 ## junctions in the city of paris
 junction_labels = sorted(['[Paris] Rivoli x Nicolas Flamel',
