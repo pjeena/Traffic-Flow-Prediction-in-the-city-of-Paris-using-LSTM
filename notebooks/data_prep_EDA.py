@@ -8,7 +8,7 @@ from datetime import date, timedelta
 from pathlib import Path
 import warnings
 warnings.filterwarnings('ignore')
-from google.cloud import bigquery
+#from google.cloud import bigquery
 
 
 ## junctions in the city of paris
