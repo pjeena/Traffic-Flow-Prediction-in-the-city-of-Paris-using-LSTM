@@ -1,6 +1,6 @@
 # Traffic Management and Optimization
 
-Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, I have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) based on historical data.
+Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, I have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) for the next 3 hours from the current time based on historical data.
 
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/schema.jpg)
 
