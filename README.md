@@ -52,9 +52,7 @@ Since the data collection is through sensors (which might not work on sometime) 
 **For simplicity, I have assumed that the traffic at one junction is independent of other which is not entirely true in real life. To incorporate dependency one might need to use Graph neural networks.**
 ## Exploratory data analysis
 
-One can get a preliminary idea regarding the traffic by some simple visualization:
-
-In fig below 
+One can get a preliminary idea regarding the traffic by some simple visualization. Below we plot the amount of traffic wrt hour, day of month, day of week.
 
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/hour.png)
 
@@ -73,7 +71,7 @@ In fig below
 
 ## Model Building
 
-After getting the data in the appropriate format, a LSTM was trained on test set and validated on val set. The model was evaluated using rmse since we are tring to predict the number of vehicles passing across a junction. \
+After getting the data in the appropriate format, a LSTM was trained on test set and validated on val set. The model was evaluated using rmse since we are tring to predict the number of vehicles passing across a junction. 
 
 
 
