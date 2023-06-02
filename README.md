@@ -123,7 +123,7 @@ Here, we see the forecasts from the last  7 days and upto the next 3 hours
     `python 06_predict_pipeline.py` 
 
 
-    One might to make a GCP account to access BigQuery otherwise it can be skipped.
+    One might want to make a GCP account to access BigQuery otherwise step 2 can be skipped.
 
 3. To get the dashboard, run this :
 
