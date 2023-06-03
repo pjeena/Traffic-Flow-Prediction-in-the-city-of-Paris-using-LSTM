@@ -54,11 +54,11 @@ Since the data collection is through sensors (which might not work on sometime) 
 
 One can get a preliminary idea regarding the traffic by some simple visualization. Below we plot the amount of traffic wrt hour, day of month, day of week.
 
-![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/hour.png)
+![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/hour.png)
 
-![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/day.png)
+![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/day.png)
 
-![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/dayname.png)
+![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dayname.png)
 
 * From all the above figures we see that Boulevard Rivoli x Sebastopol is the busiest junction in Paris which is quite true. Actually, its one of the busiest roads in the world. On the contrary, Quai de Jemappes seems quite silent.
 
