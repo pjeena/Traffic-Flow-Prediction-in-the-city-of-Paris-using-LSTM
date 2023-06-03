@@ -94,7 +94,7 @@ The API is updated daily with the latest data available from the sensors. In ord
 
 The pipeline is triggered automatically whenever new data is available, ensuring that the model is always up-to-date and accurate.
 
-Note : **Github Actions is not entirely accurate to trigger the piepline on the scheduled time. Therefore, sometimes the dashboard might not reflect the forecasts for the next 2 hours.**
+Note : **Github Actions is not entirely accurate to trigger the pipeline at the scheduled time. Therefore, sometimes the dashboard might not reflect the forecasts for the next 2 hours.**
 
 
 ## Dashboard
