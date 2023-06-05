@@ -90,7 +90,7 @@ The API is updated daily with the latest data available from the sensors. In ord
 
 **Model evaluation**: evaluating the performance of the model on the data from the psat 7 days.
 
-**Model deployment**: deploy the model on a [web-based dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/), which displays real-time traffic and historical insights on different junctions of Paris.
+**Model deployment**: deploy the model on a [web-based dashboard](https://traffic-management-and-optimization.streamlit.app/), which displays real-time traffic and historical insights on different junctions of Paris.
 
 The pipeline is triggered automatically whenever new data is available, ensuring that the model is always up-to-date and accurate.
 
@@ -100,7 +100,7 @@ Note : **Github Actions is not entirely accurate to trigger the pipeline at the 
 ## Dashboard
 
 The inferences were visualized by projecting the traffic to google maps showing the forecasted traffic and the change in traffic from prior hour.
-Link to the [dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/).
+Link to the [dashboard](https://traffic-management-and-optimization.streamlit.app/).
 
 
 This shows the traffic in 8 major junctions of Paris. More intensity of color -> more traffic
