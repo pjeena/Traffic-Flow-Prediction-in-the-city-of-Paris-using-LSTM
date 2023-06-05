@@ -1,7 +1,7 @@
 
 # Traffic Flow forecasting and Optimization
 
-Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, I have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) for the next 3 hours from the current time based on historical data. I have considered 8 major junctions of Paris which as as follows :
+Traffic forecasting plays a crucial role in transportation planning, urban management, and resource allocation. Accurate predictions can help optimize traffic flow, reduce congestion, and improve overall transportation efficiency. In this project, I have developed a machine learning model to forecast traffic (no of vehicles passing across a junction at a particular hour) for the next 3 hours from the current time based on historical data (app link is on the right side in the about section). I have considered 8 major junctions of Paris which as as follows :
 
 [Paris] Amsterdam x Clichy \
 [Paris] CF1 Rivoli x Sébastopol \
