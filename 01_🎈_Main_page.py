@@ -236,6 +236,12 @@ with col4:
 #                chart = get_chart(df,file.split('/')[2])
 
 
+                check_if_real_data_is_present_or_not = df[df.type == 'Actual']['no_of_vehicles']
+                if (check_if_real_data_is_present_or_not == 0.0).sum() > 50:
+                    #if there are more than 50 data points with 0.0 as number of vehicles, we skip that junction
+                    st.warning('Real time data is not available for :red[**{}**]'.format(file.split('/')[-2]), icon="⚠️")
+                    continue
+                    
 
                 trace1 = go.Scatter(
                     x=  df[df.type == 'Prediction']['datetime'] ,
