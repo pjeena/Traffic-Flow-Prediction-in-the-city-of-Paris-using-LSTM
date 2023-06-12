@@ -232,7 +232,7 @@ folium_static(map_hr, width=1000,height=540)
 
 col3, col4, col5 = st.columns([1.0, 10 , 1.0])
 with col4:
-        st.markdown('**Hourly Traffic prediction for the junctions since the past 7 days and upto 3 hours in future:**')
+        st.markdown('**Hourly Traffic prediction obtained from LSTM model since the past 7 days and upto 3 hours in future:**')
         for file in file_names:
                 print(file)
                 df = pd.read_csv(file,index_col=0)
