@@ -125,7 +125,7 @@ with st.spinner('Getting live predictions from the models.....'):
 
 with st.sidebar:
     st.warning('*Hover over the markers to see the junction name, traffic and change in % from prior hr*', icon="📌")
-    st.sidebar.markdown("**:red[*Scroll the main page below to see predictions for the 8 junctions in Paris*]**")
+    st.sidebar.markdown("**:red[*Scroll the main page below to see prediction plots for the respective junctions in Paris*]**")
 
 
 
