@@ -109,6 +109,7 @@ This shows the traffic in 8 major junctions of Paris. More intensity of color ->
 Here, we see the forecasts from the last  7 days and upto the next 3 hours
 ![embed](https://github.com/pjeena/Traffic-Management-and-Optimization-using-LSTM/blob/main/resources/dashboard_2.jpeg)
 
+The model performs quite well. One can play around with the lag values or can include more future forecast hours instead of 3. It heavily depends on the relevant use case. 
 ## Installation and Usage
 
 1. Install the dependencies `pip install -r requirements.txt`
