@@ -144,6 +144,12 @@ for file in file_names:
         df_pred = df[df['type'] == 'Prediction']
         df_pred['junction'] = file.split('/')[-2]
 
+        check_if_real_data_is_present_or_not = df[df.type == 'Actual']['no_of_vehicles']
+        if (check_if_real_data_is_present_or_not == 0.0).sum() > 50:
+                    #if there are more than 50 data points with 0.0 as number of vehicles, we skip that junction
+                    st.warning('Real time data is not available for :red[**{}**]'.format(file.split('/')[-2]), icon="⚠️")
+                    continue
+                    
         df_minus_1_hr = pd.DataFrame( [df_pred.iloc[-4] ] )
         df_previous_hour = pd.concat([df_previous_hour, df_minus_1_hr])
         df_previous_hour  = df_previous_hour.reset_index(drop=True)
