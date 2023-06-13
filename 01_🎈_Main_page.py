@@ -103,21 +103,21 @@ with st.spinner('Fetching live data from [OpenDataParis](%s) API.....' %url ):
 
 with st.spinner('Preprocessing raw data.....'):
 #    get_preprocessed_raw_data(dates, junction_labels)
-    time.sleep(0.0)
+    time.sleep(0.2)
     st.sidebar.write('✅ Data preprocessing completed')
     progress_bar.progress(2/N_STEPS)
 
 
 with st.spinner('Creating features and targets from time series data.....'):
  #   build_features(window_lag, window_lead)
-    time.sleep(0.0)
+    time.sleep(0.2)
     st.sidebar.write('✅ Feature engineering completed')
     progress_bar.progress(3/N_STEPS)
 
 
 with st.spinner('Getting live predictions from the models.....'):
 #    get_predictions(current_hour, past_week_hour, window_lag, num_components_in_one_time_step)
-    time.sleep(0.0)
+    time.sleep(0.2)
     st.sidebar.write('✅ Predictions arrived')
     progress_bar.progress(4/N_STEPS)
 
