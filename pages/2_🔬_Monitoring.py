@@ -64,11 +64,10 @@ for file in file_names:
 
 
 
-st.write('Nonvfrrfe')
 for i,junction in enumerate(junction_labels):
 
 
     if junction != "[Paris] Rivoli x Nicolas Flamel":
-        st.write(junction)
+#        st.write(junction)
         fig = px.line(rmse_junctions[i], x="datetime", y="mae", title=junction)
         st.plotly_chart(fig,theme='streamlit',use_container_width=True)
