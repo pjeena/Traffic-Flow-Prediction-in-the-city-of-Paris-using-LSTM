@@ -88,7 +88,7 @@ The API is updated daily with the latest data available from the sensors. In ord
 
 **Model training**: train the machine learning model on historical data. frequency : **weekly**
 
-**Model evaluation**: evaluating the performance of the model on the data from the psat 7 days.
+**Model evaluation**: evaluating the performance of the model on the data from the past 7 days.
 
 **Model deployment**: deploy the model on a [web-based dashboard](https://traffic-management-and-optimization-in-paris.streamlit.app/), which displays real-time traffic and historical insights on different junctions of Paris.
 
