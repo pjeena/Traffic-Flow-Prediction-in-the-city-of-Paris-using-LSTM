@@ -16,4 +16,4 @@ folium
 streamlit_folium
 
 
--e .
+
