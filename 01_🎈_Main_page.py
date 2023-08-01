@@ -263,7 +263,7 @@ with col4:
 
                 fig = make_subplots(specs=[[{"secondary_y": True}]])
                 fig.add_trace(trace1)
-                fig.add_trace(trace2,secondary_y=True)
+                fig.add_trace(trace2,secondary_y=False)
                 fig['layout'].update(height = 500, width = 1000, title = file.split('/')[-2], yaxis_title='No of vehicles passing each hour',xaxis_title='Datetime')
 
 
